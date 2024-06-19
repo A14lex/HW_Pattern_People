@@ -1,4 +1,7 @@
 public class Main {
+    /*
+    Правка: код отформатирован
+     */
 
 
     public static void main(String[] args) {

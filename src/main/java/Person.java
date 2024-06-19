@@ -1,4 +1,7 @@
 import java.util.Objects;
+    /*
+    Правка: код отформатирован
+     */
 
 public class Person {
     protected final String name;
@@ -59,22 +62,22 @@ public class Person {
         this.adress = adress;
     }
 
-    public void happyBirthday(){
-        this.age = age+1;
+    public void happyBirthday() {
+        this.age = age + 1;
     }
 
-    public boolean hasAge(){
-        if(age==null){
+    public boolean hasAge() {
+        if (age == null) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }
 
-    public boolean hasAddress(){
-        if(adress==null){
+    public boolean hasAddress() {
+        if (adress == null) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }
@@ -89,11 +92,11 @@ public class Person {
                 .setAdress(this.getAdress());
 
         return personBuilder;
-        }
+    }
 
     @Override
     public String toString() {
-        return  "Name: " + this.getName() + "; SurName: " + this.getSurname() +"; age: " + this.getAge() +"; Adress:" + this.getAdress();
+        return "Name: " + this.getName() + "; SurName: " + this.getSurname() + "; age: " + this.getAge() + "; Adress:" + this.getAdress();
     }
 
     @Override
