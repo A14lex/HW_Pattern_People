@@ -1,6 +1,8 @@
 import java.util.Objects;
+import java.util.OptionalInt;
     /*
     Правка: код отформатирован
+    Правка: введен OptionalInt, изменен toString
      */
 
 public class Person {
@@ -39,16 +41,18 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
-    public Integer getAge() {
-        return age;
+
+    public OptionalInt getAge() {
+        return OptionalInt.of(age);
     }
+
 
     public void setAge(Integer age) {
         this.age = age;
@@ -96,7 +100,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name: " + this.getName() + "; SurName: " + this.getSurname() + "; age: " + this.getAge() + "; Adress:" + this.getAdress();
+        return "Name: " + this.name + "; SurName: " + this.surname + "; age: " + this.age + "; Adress:" + this.adress;
     }
 
     @Override

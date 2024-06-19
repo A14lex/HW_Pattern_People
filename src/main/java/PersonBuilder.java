@@ -1,6 +1,7 @@
 public class PersonBuilder {
     /*
     Правка: код отформатирован
+    Правка: скорректирован класс исключения
      */
     protected String name;
     protected String surname;
@@ -19,7 +20,7 @@ public class PersonBuilder {
 
     public PersonBuilder setAge(Integer age) {
         if (age < 0) {
-            throw new IllegalStateException("Ошибка: некорректный возраст");
+            throw new IllegalArgumentException("Ошибка: некорректный возраст");
         }
         this.age = age;
         return this;

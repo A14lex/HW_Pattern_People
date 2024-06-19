@@ -14,12 +14,11 @@ public class Main {
         Person son = personFather.newChildBuilder()
                 .setName("Дима")
                 .build();
-        System.out.println("Папа: " + personFather);
+        System.out.println("Мама: " + personFather);
         System.out.println("Сын: " + son);
-//Проверка при недопустимых или не достаточных данных
 
         try {
-            // Не хватает обяхательных полей
+            // Не хватает обязательных полей
             System.out.println("Не хватает обязательных полей");
             new PersonBuilder().build();
         } catch (IllegalStateException e) {
