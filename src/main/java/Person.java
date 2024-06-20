@@ -2,7 +2,7 @@ import java.util.Objects;
 import java.util.OptionalInt;
     /*
     Правка: код отформатирован
-    Правка: введен OptionalInt, изменен toString
+    Правка: введен OptionalInt, изменен toString, доработан getAge (теперь с empty).
      */
 
 public class Person {
@@ -50,7 +50,13 @@ public class Person {
 
 
     public OptionalInt getAge() {
-        return OptionalInt.of(age);
+        if (age == null) {
+            return OptionalInt.empty();
+        } else {
+            return OptionalInt.of(age);
+        }
+
+
     }
 
 
